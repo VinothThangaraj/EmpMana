@@ -1,0 +1,43 @@
+﻿@{
+   // string adminUser =EmpManagement.Helper.UserLoggedinInfoHelper.GetUserName(HttpContext.Current).GetAwaiter().GetResult();
+
+    //if (Request.Cookies["PFMoUserName"] != null)
+    //{
+    //    adminUser = Request.Cookies["PFMUserName"].Value;
+    //}
+}
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header full-width vm-navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="col-md-2 col-sm-3 col-xs-2 m-res-15">
+                <img src="~/Images/logo_small.png" class="vm-logo-small">
+                <img src="~/Images/logo.png" class="vm-logo">
+            </div>
+            <div class="col-md-10 col-sm-9 col-xs-10">
+                <div id="menuOption" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav vm-nav-bar vm-top-bar-menu">
+
+
+                        <li id="vm-dashboard"><a class="navbar-brand col-xs-12 m-l-15" href="~/Home/Index">Dashboard</a></li>
+                        <li id="vm-history"><a class="navbar-brand col-xs-12 m-l-15" href="~/History/Index">History</a></li>
+                        <li id="vm-settings"><a class="navbar-brand col-xs-12 m-l-15" href="~/Settings/Index">Settings</a></li>
+
+                        <li class="dropdown pull-right vm-profile-res">
+                            <a href="#" class="dropdown-toggle col-xs-12" data-toggle="dropdown" role="button" aria-expanded="false" title="Profile"> @adminUser <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a class="col-xs-12" href="~/Authentication/Logout">Log Out</a></li>
+                            </ul>
+                        </li>
+                        <li class="pull-right"> <img src="~/Images/logo_small.png" class="vm-user-pic" /> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

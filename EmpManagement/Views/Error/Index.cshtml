@@ -1,0 +1,14 @@
+﻿ @{
+        ViewBag.Title = "Error";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+
+
+<div class="msg-div-center col-md-12 col-sm-12">
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="text-danger text-center font-25" align="center">@ViewBag.ErrorMessage</div>
+    }
+</div>
+

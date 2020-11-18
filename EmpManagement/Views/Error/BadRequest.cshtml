@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/ico" href="~/Images/favicon.ico">
+</head>
+<body>
+
+    <div style="width: 50%;
+    margin-left: 25%;
+    margin-top: 15%;">
+        @if (ViewBag.ErrorMessage != null)
+        {
+            <div style="font-size:25px; text-align:center; color:red; ">@ViewBag.ErrorMessage</div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <div style="text-align:center;">
+                <a style="background-color: #B51924; padding: 13px; color: white; cursor:pointer; text-decoration: none; border-radius: 5px;" href="~/Authentication/Login">
+                    Try Again
+                </a>
+            </div>
+        }
+    </div>
+
+</body>
+</html>
